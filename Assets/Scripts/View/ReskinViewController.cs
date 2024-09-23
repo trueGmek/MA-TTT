@@ -1,6 +1,4 @@
-﻿using System;
-using Gameplay;
-using Gameplay.Skin;
+﻿using Gameplay.Skin;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

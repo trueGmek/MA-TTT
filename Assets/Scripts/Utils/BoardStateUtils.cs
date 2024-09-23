@@ -50,11 +50,12 @@ namespace Utils
 
     public static bool CheckForDiagonalWin(BoardState boardState, out ECellState winner)
     {
-      HashSet<ECellState> statesHashSet = new(3);
-
-      statesHashSet.Add(boardState.GetCell(0, 0).State);
-      statesHashSet.Add(boardState.GetCell(1, 1).State);
-      statesHashSet.Add(boardState.GetCell(2, 2).State);
+      HashSet<ECellState> statesHashSet = new(3)
+      {
+        boardState.GetCell(0, 0).State,
+        boardState.GetCell(1, 1).State,
+        boardState.GetCell(2, 2).State
+      };
 
       if (AreAllElementsIdenticalAndNotEmpty(statesHashSet, out winner))
         return true;

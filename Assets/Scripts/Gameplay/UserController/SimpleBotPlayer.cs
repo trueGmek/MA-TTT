@@ -16,7 +16,7 @@ namespace Gameplay.UserController
       public ECellState Team;
     }
 
-    public bool HasMoved { get; set; }
+    public bool HasMoved { get; private set; }
     public ECellState Team { get; private set; }
 
     private readonly List<Cell> emptyCells = new();

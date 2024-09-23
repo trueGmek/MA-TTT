@@ -7,7 +7,7 @@ namespace Gameplay
 {
   public class HintProvider
   {
-    private BoardState boardState;
+    private readonly BoardState boardState;
 
     public HintProvider(BoardState boardState)
     {

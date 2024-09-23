@@ -9,12 +9,6 @@ namespace Data.Command
 
     private ECellState prevState;
 
-    public ChangeCellStateCommand(ECellState state, int x, int y)
-    {
-      coordinates = new Vector2Int(x, y);
-      newState = state;
-    }
-
     public ChangeCellStateCommand(ECellState state, Vector2Int coordinates)
     {
       this.coordinates = coordinates;

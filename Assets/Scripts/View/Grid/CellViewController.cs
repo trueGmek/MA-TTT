@@ -26,10 +26,10 @@ namespace View.Grid
       cellView.ControlTargetState(cachedState);
     }
 
-    public void Bind(Cell cell)
+    public void Bind(Cell newCell)
     {
-      this.cell = cell;
-      cachedState = cell.State;
+      cell = newCell;
+      cachedState = newCell.State;
 
       cellView.ControlTargetState(cachedState);
     }
