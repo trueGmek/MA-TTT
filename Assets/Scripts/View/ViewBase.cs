@@ -24,14 +24,16 @@ namespace View
 
     public void SetVisibility(bool isVisible, float time)
     {
-      if (gameObject == null || gameObject.activeSelf == isVisible)
+      if (gameObject.activeSelf == isVisible)
         return;
 
       float targetAlpha = isVisible ? 1 : 0f;
       Sequence sequence = Sequence.Create();
 
       gameObject.SetActive(true);
-      sequence.Chain(Tween.Alpha(CanvasGroup, targetAlpha, time));
+
+      if (Mathf.Approximately(targetAlpha, CanvasGroup.alpha) == false)
+        sequence.Chain(Tween.Alpha(CanvasGroup, targetAlpha, time));
 
       if (isVisible == false) sequence.ChainCallback(() => gameObject.SetActive(false));
     }

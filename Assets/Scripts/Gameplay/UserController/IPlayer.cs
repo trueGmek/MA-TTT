@@ -8,7 +8,6 @@
     public void StartTurn();
     public void Tick();
     public void EndTurn();
-
     public void ChangeTeam();
   }
 }

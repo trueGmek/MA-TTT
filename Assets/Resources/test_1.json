@@ -1,0 +1,5 @@
+{
+    "backgroundTexture": "Assets/Textures/Moon Active/EmptyBG.png",
+    "xTexture": "Assets/Textures/Moon Active/Atlas/ExTarget.png",
+    "oTexture": "Assets/Textures/Moon Active/Atlas/CircleTarget.png"
+}

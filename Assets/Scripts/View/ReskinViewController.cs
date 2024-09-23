@@ -1,4 +1,6 @@
-﻿using Gameplay;
+﻿using System;
+using Gameplay;
+using Gameplay.Skin;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,10 +13,10 @@ namespace View
     private Button button;
 
     [SerializeField]
-    private TMP_InputField inputField;
+    private SkinProvider skinProvider;
 
     [SerializeField]
-    private SkinConfigSO skinConfigSO;
+    private TMP_InputField inputField;
 
     private void OnEnable()
     {
@@ -28,7 +30,7 @@ namespace View
 
     private void SetName()
     {
-      skinConfigSO.assetBundleName = inputField.text;
+      skinProvider.LoadSkin(inputField.text);
     }
   }
 }

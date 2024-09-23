@@ -89,5 +89,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcf81ba04af54835ac00a8bd8f24f412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skinConfigSO: {fileID: 11400000, guid: bf1d5cfa4de18f34f8f19f3645ea454e, type: 2}
-  whatToLoad: 2
+  skinDataSO: {fileID: 11400000, guid: 5b333cd04a94ae940bd0964a0038d79f, type: 2}
+  whatToLoad: 30

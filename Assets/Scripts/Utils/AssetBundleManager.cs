@@ -6,7 +6,7 @@ namespace Utils
 {
   public static class AssetBundleManager
   {
-    private static Dictionary<string, AssetBundle> LoadedBundles = new();
+    private static readonly Dictionary<string, AssetBundle> LoadedBundles = new();
 
 
     public static AssetBundle Load(string path)

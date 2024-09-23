@@ -358,6 +358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gridView: {fileID: 738254282779710104}
+  gameController: {fileID: 0}
 --- !u!225 &4735558175966981140
 CanvasGroup:
   m_ObjectHideFlags: 0

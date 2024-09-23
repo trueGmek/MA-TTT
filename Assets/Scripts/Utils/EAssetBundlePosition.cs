@@ -4,8 +4,9 @@ namespace Utils
 {
   public enum EAssetBundlePosition
   {
-    O = 0,
-    X = 1,
-    Background = 2
+    Nothing = 0,
+    O = 10,
+    X = 20,
+    Background = 30,
   }
 }

@@ -1,5 +1,5 @@
-﻿using System.IO;
-using Gameplay;
+﻿using System;
+using Gameplay.Skin;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,20 +9,23 @@ namespace Utils
   public class TextureLoader : MonoBehaviour
   {
     [SerializeField]
-    private SkinConfigSO skinConfigSO;
+    private SkinDataSO skinDataSO;
 
     [SerializeField]
     private EAssetBundlePosition whatToLoad;
 
-    private void Awake()
+    private void Start()
     {
-      string path = Path.Combine(Application.streamingAssetsPath, skinConfigSO.assetBundleName);
-
-      AssetBundle assetBundle = AssetBundleManager.Load(path);
-      if (assetBundle == null)
+      if (skinDataSO == null || skinDataSO.ShouldLoadSkin == false || whatToLoad == EAssetBundlePosition.Nothing)
         return;
 
-      Sprite sprite = assetBundle.LoadAsset<Sprite>(assetBundle.GetAllAssetNames()[(int)whatToLoad]);
+      Sprite sprite = whatToLoad switch
+      {
+        EAssetBundlePosition.O => skinDataSO.OTexture,
+        EAssetBundlePosition.X => skinDataSO.XTexture,
+        EAssetBundlePosition.Background => skinDataSO.BackgroundTexture,
+        _ => throw new ArgumentOutOfRangeException()
+      };
 
       GetComponent<Image>().sprite = sprite;
     }

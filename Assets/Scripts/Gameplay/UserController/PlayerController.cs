@@ -17,7 +17,6 @@ namespace Gameplay.UserController
     private readonly List<RaycastResult> results = new();
 
     private BoardController boardController;
-    private bool isActive;
 
     public PlayerController(ECellState team)
     {
