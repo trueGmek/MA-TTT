@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using Data;
-using Gameplay;
+using Gameplay.GameController;
 using UnityEngine;
 
 namespace View.Grid
@@ -11,7 +11,7 @@ namespace View.Grid
     private GridView gridView;
 
     [SerializeField]
-    private GameController gameController;
+    private GameControllerProxy gameControllerProxy;
 
     private CellViewController[] cellControllers;
     private readonly Dictionary<Cell, CellViewController> cellsOverControllers = new();
@@ -25,20 +25,15 @@ namespace View.Grid
 
     private void Start()
     {
-      Bind(gameController.BoardController.BoardState);
+      Bind(gameControllerProxy.BoardController.BoardState);
     }
 
-    public void Show()
-    {
-      gridView.SetVisibility(true, 1f);
-    }
 
     public void ShowHint(Cell cell, ECellState mark)
     {
       hintedView = cellsOverControllers[cell];
       hintedView.ShowHint(mark);
     }
-
 
     private void Bind(BoardState boardState)
     {

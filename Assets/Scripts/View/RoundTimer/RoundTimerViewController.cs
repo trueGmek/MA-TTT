@@ -1,5 +1,6 @@
 ﻿using Events;
 using Gameplay;
+using Gameplay.GameController;
 using UnityEngine;
 
 namespace View.RoundTimer
@@ -10,7 +11,7 @@ namespace View.RoundTimer
     private RoundTimerView view;
 
     [SerializeField]
-    private GameController gameController;
+    private GameControllerProxy gameControllerProxy;
 
     private void OnEnable()
     {
@@ -26,7 +27,7 @@ namespace View.RoundTimer
 
     private void Update()
     {
-      view.SetFill(gameController.PlayersManager.NormalizedRoundTime);
+      view.SetFill(gameControllerProxy.PlayersManager.NormalizedRoundTime);
     }
 
     private void HideView()

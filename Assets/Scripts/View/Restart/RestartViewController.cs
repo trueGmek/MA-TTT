@@ -1,4 +1,4 @@
-﻿using Gameplay;
+﻿using Gameplay.GameController;
 using UnityEngine;
 
 namespace View.Restart
@@ -9,16 +9,21 @@ namespace View.Restart
     private RestartView view;
 
     [SerializeField]
-    private GameController gameController;
+    private GameControllerProxy gameControllerProxy;
 
     private void OnEnable()
     {
-      view.Button.onClick.AddListener(gameController.Restart);
+      view.Button.onClick.AddListener(Restart);
     }
 
     private void OnDisable()
     {
-      view.Button.onClick.RemoveListener(gameController.Restart);
+      view.Button.onClick.RemoveListener(Restart);
+    }
+
+    private void Restart()
+    {
+      gameControllerProxy.GameController.Restart();
     }
   }
 }

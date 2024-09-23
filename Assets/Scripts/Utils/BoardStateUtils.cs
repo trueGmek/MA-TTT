@@ -107,9 +107,17 @@ namespace Utils
       return false;
     }
 
-    public static int GetCellCount(this BoardState board, ECellState state)
+    private static int GetCellCount(this BoardState board, ECellState state)
     {
-      return board.Count(cell => cell.State == state);
+      int count = 0;
+
+      foreach (Cell cell in board.Cells)
+      {
+        if (cell.State == state)
+          count++;
+      }
+
+      return count;
     }
   }
 }

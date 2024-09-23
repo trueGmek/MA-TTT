@@ -1,5 +1,6 @@
 ﻿using Events;
 using Gameplay;
+using Gameplay.GameController;
 using UnityEngine;
 
 namespace View.UndoLastMove
@@ -10,7 +11,7 @@ namespace View.UndoLastMove
     private UndoLastMoveView view;
 
     [SerializeField]
-    private GameController gameController;
+    private GameControllerProxy gameControllerProxy;
 
     private void OnEnable()
     {
@@ -28,7 +29,7 @@ namespace View.UndoLastMove
 
     private void ReverseMove()
     {
-      gameController.ReverseLastMove();
+      gameControllerProxy.GameController.ReverseLastMove();
     }
 
     private void HideView()

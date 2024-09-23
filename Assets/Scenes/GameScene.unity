@@ -946,6 +946,10 @@ PrefabInstance:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 1002337809}
+    - target: {fileID: 3179679865849772696, guid: 2e747835113e9634c93db5ba0e09a637, type: 3}
+      propertyPath: gameControllerProxy
+      value: 
+      objectReference: {fileID: 1002337809}
     - target: {fileID: 3603701957036690194, guid: 2e747835113e9634c93db5ba0e09a637, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -1152,6 +1156,10 @@ PrefabInstance:
       propertyPath: gridViewController
       value: 
       objectReference: {fileID: 544105013}
+    - target: {fileID: 7332595330044105683, guid: f8b85e68ef8f0ff449bd9457ced7445c, type: 3}
+      propertyPath: gameControllerProxy
+      value: 
+      objectReference: {fileID: 1002337809}
     - target: {fileID: 7332595330044105684, guid: f8b85e68ef8f0ff449bd9457ced7445c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1251,6 +1259,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 594065289654707883, guid: e128afed245c7ea4cbd8484984923201, type: 3}
       propertyPath: gameController
+      value: 
+      objectReference: {fileID: 1002337809}
+    - target: {fileID: 594065289654707883, guid: e128afed245c7ea4cbd8484984923201, type: 3}
+      propertyPath: gameControllerProxy
       value: 
       objectReference: {fileID: 1002337809}
     - target: {fileID: 2269237242942306086, guid: e128afed245c7ea4cbd8484984923201, type: 3}
@@ -1357,6 +1369,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3685476022020413864, guid: 1e9d91ae918a5a14f80b04761b1445f3, type: 3}
       propertyPath: gameController
+      value: 
+      objectReference: {fileID: 1002337809}
+    - target: {fileID: 3685476022020413864, guid: 1e9d91ae918a5a14f80b04761b1445f3, type: 3}
+      propertyPath: gameControllerProxy
       value: 
       objectReference: {fileID: 1002337809}
     - target: {fileID: 4092474407801023261, guid: 1e9d91ae918a5a14f80b04761b1445f3, type: 3}

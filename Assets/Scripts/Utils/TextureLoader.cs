@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using Gameplay.Skin;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,6 +25,7 @@ namespace Utils
         EAssetBundlePosition.O => skinDataSO.OTexture,
         EAssetBundlePosition.X => skinDataSO.XTexture,
         EAssetBundlePosition.Background => skinDataSO.BackgroundTexture,
+        EAssetBundlePosition.Nothing => null,
         _ => throw new ArgumentOutOfRangeException()
       };
 

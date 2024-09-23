@@ -1,6 +1,7 @@
 ﻿using Data;
 using Events;
 using Gameplay;
+using Gameplay.GameController;
 using UnityEngine;
 using View.Grid;
 
@@ -9,7 +10,7 @@ namespace View.Hint
   public class HintViewController : MonoBehaviour
   {
     [SerializeField]
-    private GameController gameController;
+    private GameControllerProxy gameControllerProxy;
 
     [SerializeField]
     private GridViewController gridViewController;
@@ -34,8 +35,8 @@ namespace View.Hint
 
     private void ShowHint()
     {
-      ECellState currentTeam = gameController.PlayersManager.CurrentPlayer.Team;
-      gridViewController.ShowHint(gameController.HintProvider.GetHint(currentTeam), currentTeam);
+      ECellState currentTeam = gameControllerProxy.PlayersManager.CurrentPlayer.Team;
+      gridViewController.ShowHint(gameControllerProxy.HintProvider.GetHint(currentTeam), currentTeam);
     }
 
     private void HideView()
